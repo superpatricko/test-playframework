@@ -5,10 +5,15 @@ import play.mvc.Result;
 
 import views.html.*;
 
+import java.util.Arrays;
+import java.util.List;
+
+
 public class Contacts extends Controller {
 
 	public static Result index() {
-		return ok(index.render("Hello, once again, World"));
+		List<String> names = Arrays.asList("James", "Emma", "Ollie", "Nate");
+		return ok(index.render("Hello, once again, World", names));
 	}
 
 	public static Result create() {

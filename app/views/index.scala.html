@@ -1,4 +1,4 @@
-@(message: String)
+@(message: String, names: List[String])
 
 <!DOCTYPE html>
 <html>
@@ -7,5 +7,11 @@
 </head>
 <body>
 <h1>@message</h1>
+
+<ul>
+	@for(name <- names) {
+		<li>@name</li>
+	}
+</ul>
 </body>
 </html>
