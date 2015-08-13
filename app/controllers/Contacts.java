@@ -12,7 +12,7 @@ import java.util.List;
 public class Contacts extends Controller {
 
 	public static Result index() {
-		List<String> names = Arrays.asList("James", "Emma", "Ollie", "Nate");
+		List<String> names = Arrays.asList();
 		return ok(index.render("Hello, once again, World", names));
 	}
 
