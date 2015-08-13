@@ -1,6 +1,20 @@
-@(message: String, names: List[String])
+@(contacts: List[models.Contact])
 
 @layout {
-	<h1>@Html(message)</h1>
-		@namelist(names)
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Email Address</th>
+			</tr>
+		</thead>
+		<tbody>
+			@for(contact <- contacts) {
+				<tr>
+					<td>@contact.getName()</td>
+					<td>@contact.getEmailAddress()</td>
+				</tr>
+			}
+		</tbody>
+	</table>
 }

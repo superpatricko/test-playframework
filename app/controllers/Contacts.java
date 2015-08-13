@@ -1,5 +1,6 @@
 package controllers;
 
+import models.Contact;
 import play.mvc.Controller;
 import play.mvc.Result;
 
@@ -12,8 +13,9 @@ import java.util.List;
 public class Contacts extends Controller {
 
 	public static Result index() {
-		List<String> names = Arrays.asList("James", "Emma", "Ollie", "Nate");
-		return ok(index.render("Hello, once again, World... <small>with feeling</small>", names));
+		// List<String> names = Arrays.asList("James", "Emma", "Ollie", "Nate");
+		List<Contact> contacts = Contact.find.all();
+		return ok(index.render(contacts));
 	}
 
 	public static Result another() {

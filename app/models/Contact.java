@@ -13,6 +13,8 @@ public class Contact extends Model {
 	String name;
 	String emailAddress;
 
+	public static Finder<Long, Contact> find = new Finder<Long, Contact>(Long.class, Contact.class);
+
 	public Long getId() {
 		return id;
 	}
