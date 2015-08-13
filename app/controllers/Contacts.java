@@ -3,10 +3,12 @@ package controllers;
 import play.mvc.Controller;
 import play.mvc.Result;
 
+import views.html.*;
+
 public class Contacts extends Controller {
 
 	public static Result index() {
-		return TODO;
+		return ok(index.render());
 	}
 
 	public static Result create() {
