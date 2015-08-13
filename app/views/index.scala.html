@@ -1,21 +1,6 @@
 @(message: String, names: List[String])
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Play! for Java</title>
-</head>
-<body>
-<h1>@message</h1>
-
-@if(names.isEmpty()) {
-	<h2>There are no names</h2>
-} else {
-	<ul>
-		@for(name <- names) {
-			<li>@name</li>
-		}
-	</ul>
+@layout {
+	<h1>@message</h1>
+		@namelist(names)
 }
-</body>
-</html>
