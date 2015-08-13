@@ -8,7 +8,7 @@ import views.html.*;
 public class Contacts extends Controller {
 
 	public static Result index() {
-		return ok(index.render());
+		return ok(index.render("Hello, once again, World"));
 	}
 
 	public static Result create() {
